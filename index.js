@@ -80,7 +80,7 @@ function multiply(a, b){
   return answer;
 }
 
-console.log(multiply(3, 7));
+console.log("Task 1d: ", multiply(3, 7));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -96,7 +96,7 @@ function dogYears(humanYears){
   return humanYears * 7;  
 }
 
-console.log(dogYears(8))
+console.log("Task 2: ", dogYears(8))
 
 
 
@@ -147,10 +147,28 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
 */  
 
 function hungryDog(weight, age){
-  /*add your code here*/
+  if(age >= 1){
+    if(weight <= 5){
+    return weight * 0.05;
+    } else if(weight >= 6 && weight <= 10){
+      return weight * 0.04;
+    } else if(weight >= 11 && weight <= 15){
+      return weight * 0.03;
+    } else if(weight > 15){
+      return weight * 0.02;
+    }
+  } else if(age < 1 && age >= 0.583){
+    return weight * 0.04;
+  } else if(age < 0.583 && age >= 0.333){
+    return weight * 0.05;
+  } else if(age < 0.333){
+    return weight * 0.1;
+  } else{
+    return "Try again";
+  }
 }
 
-hungryDog(25)
+console.log("Task 3: ", hungryDog(4, 1));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
